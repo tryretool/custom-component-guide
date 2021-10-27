@@ -1,4 +1,4 @@
-# Retool + BYI: React Custom Components 
+# Retool + BYO: React Custom Components 
 If you have a use case that isn't handled by Retool's built-in components, you can build your own custom component to solve that use case. Really anything that can be compiled down to javascript can be used within Retool's custom components. While Retool allows you to write React directly within its iframe code, you may find it limiting in regards to development environment or packages that can be added; this repository breaks down both barriers.
 
 The purpose of this repository is to give a React developer a baseline development envrionment that includes
