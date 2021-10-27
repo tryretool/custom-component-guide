@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 4px;
+}
+
+.textToShow {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width:60px;
+  height:60px;
+  background-color:#0C9;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  transition: all .2s ease-in-out; 
+}
+.textToShow:hover {
+  width: 100%;
+}
+
+.texttoshow > p {
+  display: none;
+}
+
+.texttoshow:hover > p {
+  display: block;
+}

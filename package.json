@@ -1,0 +1,33 @@
+{
+  "name": "retool_custom_components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -rf dist && rm -rf examples && yarn install",
+    "dev": "webpack-dev-server --mode=development",
+    "dev-examples": "webpack-dev-server --mode=development --config webpack.examples.config.js",
+    "prod": "webpack --mode=production",
+    "prod-examples": "webpack --mode=production --config webpack.examples.config.js"
+  },
+  "author": "bryan-at-retool",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.4.0",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-stepper-horizontal": "^1.0.11",
+    "styled-components": "^5.3.3"
+  }
+}
