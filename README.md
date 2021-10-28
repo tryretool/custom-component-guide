@@ -27,7 +27,7 @@ yarn dev
 After starting the webpack dev server with `yarn dev` and the example dev server servers your built javascript at `http://localhost:8080/main.js`. Once the dev server is running, open up a Retool application, drag a custom component in and place the following in the iframe code:
 
 ```html
-<script type="text/javascript" src="http://localhost:8080/main.js" />
+<script type="text/javascript" src="http://localhost:8080/index.js" />
 ```
 
 ### Example application
