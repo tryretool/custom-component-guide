@@ -27,7 +27,7 @@ const ExampleComponent = ({ triggerQuery, model, modelUpdate }) => {
         >Get a random user</button>
       </div>
       <div>
-        <p>What about model updates?</p>
+        <p>Hello Dave Leo?</p>
         <input onChange={handleChange} />
       </div>
       <h2>

@@ -10,8 +10,6 @@ const HorizontalStepper = ({ triggerQuery, model, modelUpdate }) => {
   if (!(model.steps && typeof model.steps === 'object' && model.steps.length) ) { model['steps'] = DEFAULT_STEPS; }
   if (!(model.colors && typeof model.colors === 'object' && model.colors.length) ) { model['colors'] = DEFAULT_COLORS; }
   if (!(typeof model.active_step === 'number' && model.active_step > -1) ) { model['active_step'] = 0; }
-
-  
   
   return (
     <StepperContainer>
