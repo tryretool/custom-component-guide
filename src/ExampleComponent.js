@@ -1,39 +1,54 @@
 import React from 'react';
+
+import { Box, Button, Divider, TextField, Typography } from '@mui/material'
+
+/* Default component model
+  {
+    "greeting": "Hello, ",  
+    "username": {{ current_user.fullName }},
+    "message": "Welcome to custom components!",
+    "yesQuery": "yesQuery",
+    "noQuery": "noQuery",
+    "runQuery": "runQuery"
+  }
+*/
+
 const ExampleComponent = ({ triggerQuery, model, modelUpdate }) => {
   const handleChange = (e) => {
     modelUpdate({
-      headerText: e.target.value
+      greeting: e.target.value
     })
   }
   return(
-    <div style={{width: '100vw', height: '100vh'}}>
-      <div>
-        <h4>{model.headerText ?? ''}</h4>
-        <p>Want to run a query?</p>
-        <button
-          onClick={()=>triggerQuery(model.yesQuery)}
-        >
-          👍
-        </button>
-        <button
-          onClick={()=>triggerQuery(model.noQuery)}
-        >
-          👎
-        </button>
-      </div>
-      <div>
-        <button
-          onClick={()=>triggerQuery(model.runQuery)}
-        >Get a random user</button>
-      </div>
-      <div>
-        <p>Hello Dave Leo?</p>
-        <input onChange={handleChange} />
-      </div>
-      <h2>
-        {model.displayText}
-      </h2>
-    </div>
+    <>
+          <Box sx={{ m: 1 }}>
+            <Typography variant='h2'>{model.greeting}{model.username}</Typography>
+            <Typography variant='h4'>{model.message}</Typography>
+            <Button variant="outlined"
+              onClick={()=>triggerQuery(model.runQuery)}
+            >Get a user name</Button>
+          </Box>
+
+          <Box sx={{ m: 1 }}>
+            <Typography variant='body1'>Want to trigger a query?</Typography>
+            <Button variant="outlined"
+              onClick={()=>triggerQuery(model.yesQuery)}
+            >
+              👍
+            </Button>
+            <Button variant="outlined"
+              onClick={()=>triggerQuery(model.noQuery)}
+            >
+              👎
+            </Button>
+          </Box>
+
+          <Divider />
+
+          <Box sx={{ m: 1 }}>
+            <TextField id="outlined-uncontrolled" label="Change Greeting" onChange={handleChange} />
+          </Box>
+      </>
   );
 }
 export default ExampleComponent;

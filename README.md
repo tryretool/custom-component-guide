@@ -14,24 +14,45 @@ We are accepting bugs and feature requests to this repository through issues.
 
 # Getting Started
 
-Getting started with local development happens in two parts, cloning this repository and setting up your Retool application to listen to it.
+Getting started with local development happens in two parts, cloning this repository and setting up your Retool application to listen to it:
+
+1. Setting up local environment
+    - Clone repository
+    - Install dependendencies
+2. Setting up Retool application
+    - Add a custom component to the application
+    - Update the component's iFrame Code
+    - Update the component's Model
 
 ## Setting up local environment
 
 ```shell
 git clone https://github.com/bryan-at-retool/react-custom-components
+cd react-custom-components
 yarn install
 yarn dev
 ```
 
-After starting the webpack dev server with `yarn dev` and the example dev server servers your built javascript at `http://localhost:8080/main.js`. Once the dev server is running, open up a Retool application, drag a custom component in and place the following in the iframe code:
+After starting the webpack dev server with `yarn dev` and the example dev server servers your built javascript at `http://localhost:8080/main.js`. Once the dev server is running, open up a Retool application, and drag a custom component on to the canvas. 
+
+In the component inspector, replace the default iFrame code with the following:
 
 ```html
 <script type="text/javascript" src="http://localhost:8080/index.js" />
 ```
 
-### Example application
-If you'd like to get started on a completed application, you can download a Retool application [here]("/example_application.json") and import it into Retool [docs]("https://docs.retool.com/docs/app-management#exporting-retool-apps").
+In the component inspector, replace the Model value with the following:
+
+```
+{
+  "username": {{"Hello, " +  current_user.fullName }},
+  ""headline": "",
+  "message": "Welcome to custom components!",
+  "yesQuery": "yesQuery",
+  "noQuery": "noQuery",
+  "runQuery": "runQuery"
+}
+```
 
 
 ## Developing in this repository
