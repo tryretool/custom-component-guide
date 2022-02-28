@@ -28,7 +28,7 @@ Getting started with local development happens in two parts, cloning this reposi
 
 ```shell
 git clone git@github.com:tryretool/custom-component-guide.git
-cd react-custom-components
+cd custom-component-guide
 yarn install
 yarn dev
 ```
