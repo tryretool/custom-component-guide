@@ -48,7 +48,6 @@ const ExampleComponent = ({ triggerQuery, model, modelUpdate }) => {
           <Box sx={{ m: 1 }}>
             <TextField id="outlined-uncontrolled" label="Change Greeting" onChange={handleChange} />
           </Box>
-          
       </>
   );
 }
