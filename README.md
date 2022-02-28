@@ -27,7 +27,7 @@ Getting started with local development happens in two parts, cloning this reposi
 ## Setting up local environment
 
 ```shell
-git clone https://github.com/bryan-at-retool/react-custom-components
+git clone git@github.com:tryretool/custom-component-guide.git
 cd react-custom-components
 yarn install
 yarn dev
