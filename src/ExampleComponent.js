@@ -1,4 +1,5 @@
 import React from 'react';
+import MathJax from 'react-mathjax'
 
 import { Box, Button, Divider, TextField, Typography } from '@mui/material'
 
@@ -13,6 +14,11 @@ import { Box, Button, Divider, TextField, Typography } from '@mui/material'
   }
 */
 
+const tex = {
+  quadratic_solution: 'x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}',
+  tex_example: `f(x) = \\int_{-\\infty}^\\infty \\hat f(\\xi)\\,e^{2 \\pi i \\xi x} \\,d\\xi`,
+}
+
 const ExampleComponent = ({ triggerQuery, model, modelUpdate }) => {
   const handleChange = (e) => {
     modelUpdate({
@@ -21,34 +27,14 @@ const ExampleComponent = ({ triggerQuery, model, modelUpdate }) => {
   }
   return(
     <>
-          <Box sx={{ m: 1 }}>
-            <Typography variant='h2'>{model.greeting}{model.username}</Typography>
-            <Typography variant='h4'>{model.message}</Typography>
-            <Button variant="outlined"
-              onClick={()=>triggerQuery(model.runQuery)}
-            >Get a user name</Button>
-          </Box>
-
-          <Box sx={{ m: 1 }}>
-            <Typography variant='body1'>Want to trigger a query?</Typography>
-            <Button variant="outlined"
-              onClick={()=>triggerQuery(model.yesQuery)}
-            >
-              👍
-            </Button>
-            <Button variant="outlined"
-              onClick={()=>triggerQuery(model.noQuery)}
-            >
-              👎
-            </Button>
-          </Box>
-
-          <Divider />
-
-          <Box sx={{ m: 1 }}>
-            <TextField id="outlined-uncontrolled" label="Change Greeting" onChange={handleChange} />
-          </Box>
-      </>
+      <Box sx={{ m: 1 }} id="retool-custom-mathjax-container">
+        <Typography variant="body1">{model.text}</Typography>
+          <MathJax.Provider>
+          <MathJax.Node formula={model.equation} id="retool-custom-mathjax-equation"/>
+        </MathJax.Provider>
+        <Typography variant="body1">{model.question}</Typography>
+      </Box>
+    </>
   );
 }
 export default ExampleComponent;
