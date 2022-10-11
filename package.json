@@ -30,6 +30,7 @@
     "@mui/material": "^5.4.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-image-pan-zoom-rotate": "^1.6.0",
     "react-stepper-horizontal": "^1.0.11",
     "styled-components": "^5.3.3"
   }
