@@ -61,7 +61,7 @@ While running `yarn dev` you can easily modify `src/index.js` and `src/ExampleCo
 
 
 # BYO Component Library
-You may wish to use your own component library in Retool for specific styling or UI elements; however, we encourage you to reach out and file a feature request! If you are bringing your own component, this repository can give you examples of how to extend your library and use it as first class components in Retool. When a custom component is available in an application, it loads into a sandbox'd iframe to give you control over an HTML document javascript. Retool will also provide you with an interface to help communicate with the Retool application; you can read more [here]("https://docs.retool.com/docs/custom-react-components#interface")
+You may wish to use your own component library in Retool for specific styling or UI elements; however, we encourage you to reach out and file a feature request! If you are bringing your own component, this repository can give you examples of how to extend your library and use it as first class components in Retool. When a custom component is available in an application, it loads into a sandbox'd iframe to give you control over an HTML document javascript. Retool will also provide you with an interface to help communicate with the Retool application; you can read more [here](https://docs.retool.com/docs/custom-react-components#interface)
 
 ## Retool.createReactComponent()
 Retool's sandboxed iframe will provide a wrapper for React components for you to access the interface, which are available in the document at `Retool.createReactComponent()`. If your components are wrapped in this function, `model`, `modelUpdate`, and `triggerQuery` will be available for your component. For example:
